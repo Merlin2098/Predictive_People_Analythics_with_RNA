@@ -66,6 +66,9 @@ El modelo **asume que las tendencias pasadas se mantienen** en el futuro, sin co
 ### 🔒 Variables exógenas constantes
 **Eventos externos, crisis económicas y cambios organizacionales** se consideran constantes durante el período de proyección y no se incluyen como variables predictivas en el modelo.
 
+### ⏭️ Pronóstico Anual
+El pronóstico se realiza al cierre del año (cuarto trimestre), por lo que las predicciones de los cuatro trimestres siguientes siempre corresponderán al año fiscal subsiguiente.
+
 ---
 
 ## 🎯 Recomendaciones de Uso
