@@ -99,6 +99,31 @@ proyecto/
 
 ---
 
+## Cómo Ejecutar el Proyecto
+
+Para comenzar a usar este proyecto, sigue estos pasos:
+
+1.  **Clonar el repositorio:**
+    Abre tu terminal o línea de comandos y ejecuta el siguiente comando para descargar el proyecto en tu máquina local.
+    ```bash
+    git clone [https://github.com/Merlin2098/Predictive_People_Analythics_with_RNA.git](https://github.com/Merlin2098/Predictive_People_Analythics_with_RNA.git)
+    ```
+
+2.  **Navegar al directorio del proyecto:**
+    ```bash
+    cd Predictive_People_Analythics_with_RNA
+    ```
+
+3.  **Configurar el entorno:**
+    Instala las bibliotecas necesarias usando el archivo `requirements.txt`.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Ejecutar el pipeline:**
+    Abre el archivo de tu notebook (`.ipynb`) en Google Colab o Jupyter Notebook y ejecuta las celdas en orden.
+
+
 **Versión del proyecto**: 1.0  
 **Última actualización**: 09/2025  
 **Estado**: Demostrativo/Académico
