@@ -1,0 +1,30 @@
+# Pipeline de Predicción de Ingresos y Ceses de Personal con RNA
+# Requirements for Python environment
+
+# Core data manipulation and analysis
+pandas>=1.5.0
+numpy>=1.21.0
+
+# Machine learning and neural networks
+tensorflow>=2.10.0
+scikit-learn>=1.1.0
+
+# Visualization libraries
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Model persistence and utilities
+joblib>=1.2.0
+
+# Excel file handling
+openpyxl>=3.0.0
+
+# Jupyter notebook utilities (for Google Colab compatibility)
+IPython>=8.0.0
+
+# System and file operations (usually included in Python standard library)
+# os - included in Python standard library
+
+# Optional: For reproducibility
+# scipy>=1.9.0  # Usually installed with scikit-learn
+# setuptools>=65.0.0  # For package management

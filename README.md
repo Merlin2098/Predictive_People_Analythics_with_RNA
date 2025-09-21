@@ -71,6 +71,7 @@ proyecto/
 ├── README.md                    # Este archivo
 ├── ReadMe_SupuestosModelo.md   # Limitaciones y supuestos técnicos
 ├── Pipeline_Diagrama.png        # Diagrama visual del pipeline
+├── requirements.txt
 ├── notebooks/                   # Notebooks de Google Colab
 ├── data/                        # Datasets generados
 │   ├── dataset_contrataciones.csv
