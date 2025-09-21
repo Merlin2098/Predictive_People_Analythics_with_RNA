@@ -1,0 +1,16 @@
+# Archivos de caché
+__pycache__/
+*.pyc
+
+# Modelos entrenados y preprocesadores
+*.h5
+*.keras
+*.pkl
+*.joblib
+
+# Archivos de datos generados al ejecutar el pipeline
+# Por ejemplo, el archivo de pronóstico final
+forecast.csv
+
+# Archivos temporales o de sistema
+.DS_Store
