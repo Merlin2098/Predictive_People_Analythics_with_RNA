@@ -1,129 +1,162 @@
-# Predictive People Analytics with RNA
+# Predictive People Analytics with Neural Networks (RNA)
 
-## 📋 Resumen del Proyecto
+## 📋 Project Overview
 
-Este proyecto implementa un **pipeline completo de machine learning** para la predicción de ingresos y ceses de personal utilizando **Redes Neuronales Artificiales (RNA)**. El sistema está diseñado para generar pronósticos de movimientos de personal y sus costos asociados a nivel trimestral, proporcionando información valiosa para la planificación estratégica de recursos humanos.
+This project implements a **full end-to-end machine learning pipeline** for predicting workforce hiring and attrition events using **Artificial Neural Networks (ANN)**. The system is designed to generate quarterly headcount movement forecasts and their associated cost projections, delivering actionable intelligence for strategic HR planning.
 
-El pipeline incluye desde la generación de datos sintéticos hasta la creación de dashboards ejecutivos con presupuestos detallados, demostrando capacidades completas de ciencia de datos aplicada a People Analytics.
+The pipeline covers the complete data science lifecycle — from synthetic data generation to executive dashboard creation — demonstrating production-grade data engineering and ML capabilities applied to the People Analytics domain.
 
-**⚠️ IMPORTANTE**: Para comprender las limitaciones, supuestos y consideraciones técnicas del modelo, consulte el documento [`ReadMe_SupuestosModelo.md`](./ReadMe_SupuestosModelo.md) antes de utilizar o interpretar los resultados.
-
-## 🚀 Tecnologías Utilizadas
-
-### 💻 Entorno de Desarrollo
-- **Google Colab Notebook**: Plataforma cloud para desarrollo y ejecución del pipeline
-
-### 🐍 Lenguaje de Programación
-- **Python 3.x**: Lenguaje principal para todo el desarrollo
-
-### 📚 Librerías y Frameworks
-
-#### Machine Learning y Análisis de Datos
-- **TensorFlow/Keras**: Construcción y entrenamiento de redes neuronales
-- **scikit-learn**: Preprocesamiento de datos y métricas de evaluación
-- **pandas**: Manipulación y análisis de datos estructurados
-- **numpy**: Operaciones numéricas y arrays multidimensionales
-
-#### Visualización
-- **matplotlib**: Creación de gráficos y visualizaciones estáticas
-- **seaborn**: Visualizaciones estadísticas avanzadas y heatmaps
-
-#### Utilidades y Persistencia
-- **joblib**: Serialización de modelos y transformadores
-- **IPython.display**: Visualización mejorada en notebooks
-- **os**: Operaciones del sistema operativo
-
-#### Formato y Exportación
-- **openpyxl**: Manipulación de archivos Excel
-
-## 🔧 Arquitectura del Pipeline
-
-El pipeline está estructurado en **7 pasos principales**:
-
-1. **Generación de Datos Sintéticos**: Creación de dataset con distribuciones estadísticas realistas
-2. **Preprocesamiento y Entrenamiento RNA**: Modelos especializados para ingresos y ceses
-3. **Análisis Visual de Resultados**: Evaluación de precisión del modelo
-4. **Forecast Futuro**: Predicciones para próximos 4 trimestres
-5. **Visualización de Predicciones**: Dashboards interactivos de pronósticos
-6. **Generación de Presupuesto**: Conversión de predicciones a costos financieros
-7. **Resumen Ejecutivo**: Tablas de visualización para el presupuesto proyectado de HR
-
-## 📊 Características Principales
-
-- **Modelos Independientes**: RNA separadas para ingresos y ceses
-- **Arquitecturas Configurables**: 4 opciones de complejidad de red neuronal
-- **Rangos de Confianza**: Intervalos basados en error histórico del modelo
-- **Factores de Costo Realistas**: 3.2x para ingresos, 1.5x para ceses
-- **Visualizaciones Comprehensivas**: Heatmaps, histogramas y tablas resumen
-- **Formato Empresarial**: Salidas listas para presentación ejecutiva
-
-## 🎯 Casos de Uso
-
-- **Planificación de RRHH**: Anticipar necesidades de contratación
-- **Gestión de Presupuesto**: Estimar costos de personal por trimestre
-- **Análisis de Rotación**: Identificar áreas con alta probabilidad de ceses
-- **Toma de Decisiones**: Información cuantitativa para estrategia organizacional
-
-## 📁 Estructura de Archivos
-
-```
-proyecto/
-├── README.md                    # Este archivo
-├── ReadMe_SupuestosModelo.md   # Limitaciones y supuestos técnicos
-├── Pipeline_Diagrama.png        # Diagrama visual del pipeline
-├── requirements.txt
-├── notebooks/                   # Notebooks de Google Colab
-├── data/                        # Datasets generados
-│   ├── dataset_contrataciones.csv
-│   ├── forecast_rrhh.csv
-│   └── presupuesto_rrhh.xlsx
-├── models/                      # Modelos entrenados
-├── scalers/                     # Transformadores persistidos
-└── encoders/                    # Codificadores guardados
-```
-
-**Nota para Google Colab**: Todos los archivos de las carpetas (`data/`, `models/`, `scalers/`, `encoders/`) se generan automáticamente durante la ejecución del pipeline en el directorio de trabajo de Colab. No es necesario crear estas carpetas previamente.
-
-## ⚡ Inicio Rápido
-
-1. Abrir el notebook principal en Google Colab
-2. Ejecutar los pasos del pipeline secuencialmente (Paso 1 → Paso Final)
-3. Revisar las visualizaciones y métricas generadas
-4. Analizar los archivos de salida (CSV/Excel)
-
-## 📈 Métricas de Evaluación
-
-- **MAE (Mean Absolute Error)**: Error promedio en número de personas
-- **RMSE (Root Mean Square Error)**: Penalización de errores grandes
-- **R² (Coeficiente de Determinación)**: Porcentaje de varianza explicada
+> **⚠️ IMPORTANT**: Before using or interpreting model outputs, please read [`ReadMe_SupuestosModelo.md`](./ReadMe_SupuestosModelo.md) for a full description of model assumptions, limitations, and technical constraints.
 
 ---
 
-## Cómo Ejecutar el Proyecto
+## 🚀 Technology Stack
 
-Para comenzar a usar este proyecto, sigue estos pasos:
+### 💻 Development Environment
+- **Google Colab Notebook**: Cloud-based platform for pipeline development and execution
 
-1.  **Clonar el repositorio:**
-    Abre tu terminal o línea de comandos y ejecuta el siguiente comando para descargar el proyecto en tu máquina local.
-    ```bash
-    git clone [https://github.com/Merlin2098/Predictive_People_Analythics_with_RNA.git](https://github.com/Merlin2098/Predictive_People_Analythics_with_RNA.git)
-    ```
+### 🐍 Programming Language
+- **Python 3.x**: Primary language across the full stack
 
-2.  **Navegar al directorio del proyecto:**
-    ```bash
-    cd Predictive_People_Analythics_with_RNA
-    ```
+### 📚 Libraries & Frameworks
 
-3.  **Configurar el entorno:**
-    Instala las bibliotecas necesarias usando el archivo `requirements.txt`.
-    ```bash
-    pip install -r requirements.txt
-    ```
+#### Machine Learning & Data Processing
+| Library | Role |
+|---|---|
+| **TensorFlow / Keras** | Neural network architecture, training, and inference |
+| **scikit-learn** | Data preprocessing, feature encoding, and evaluation metrics |
+| **pandas** | Tabular data manipulation and aggregation |
+| **NumPy** | Numerical operations and array computations |
 
-4.  **Ejecutar el pipeline:**
-    Abre el archivo de tu notebook (`.ipynb`) en Google Colab o Jupyter Notebook y ejecuta las celdas en orden.
+#### Visualization
+| Library | Role |
+|---|---|
+| **matplotlib** | Static charts and model performance plots |
+| **seaborn** | Statistical visualizations, heatmaps, and distribution plots |
 
+#### Utilities & Persistence
+| Library | Role |
+|---|---|
+| **joblib** | Model and transformer serialization |
+| **openpyxl** | Excel report generation |
+| **IPython.display** | Enhanced notebook output rendering |
 
-**Versión del proyecto**: 1.0  
-**Última actualización**: 09/2025  
-**Estado**: Demostrativo/Académico
+---
+
+## 🔧 Pipeline Architecture
+
+The pipeline is structured into **7 sequential stages**:
+
+```
+Stage 1 → Synthetic Data Generation
+Stage 2 → Preprocessing & ANN Training
+Stage 3 → Model Performance Visualization
+Stage 4 → Future Forecast (4 quarters)
+Stage 5 → Forecast Dashboard
+Stage 6 → Budget Projection
+Stage 7 → Executive Summary Report
+```
+
+| Stage | Description |
+|---|---|
+| **1 — Synthetic Data Generation** | Creates a statistically realistic dataset using configurable probability distributions |
+| **2 — Preprocessing & ANN Training** | Trains two independent models: one for hires, one for attrition |
+| **3 — Model Performance Visualization** | Evaluates model accuracy with residual plots and error metrics |
+| **4 — Future Forecast** | Generates predictions for the next 4 fiscal quarters |
+| **5 — Forecast Visualization** | Interactive dashboards displaying headcount projections by project and area |
+| **6 — Budget Generation** | Converts headcount predictions into financial cost estimates |
+| **7 — Executive Summary** | Formatted tables ready for C-level and HR leadership presentations |
+
+---
+
+## 📊 Key Features
+
+- **Dual Independent Models**: Separate ANNs for hires and attrition events, avoiding target leakage
+- **Configurable Architectures**: 4 selectable network complexity profiles to fit different data volumes
+- **Confidence Intervals**: Range estimates derived from historical model error, enabling uncertainty quantification
+- **Realistic Cost Factors**: Industry-calibrated multipliers (3.2× hires, 1.5× attrition) for budget accuracy
+- **Comprehensive Visualizations**: Heatmaps, histograms, trend lines, and executive summary tables
+- **Business-Ready Output**: Excel reports and formatted tables suitable for direct stakeholder delivery
+
+---
+
+## 🎯 Use Cases
+
+| Use Case | Description |
+|---|---|
+| **Workforce Planning** | Anticipate quarterly hiring needs by project and area |
+| **Budget Management** | Estimate personnel costs for financial planning cycles |
+| **Attrition Analysis** | Identify organizational units with elevated turnover probability |
+| **Strategic Decision-Making** | Provide quantitative evidence for HR and executive strategy |
+
+---
+
+## 📁 Repository Structure
+
+```
+Predictive_People_Analythics_with_RNA/
+├── README.md                       # This file — project overview (English)
+├── ReadMe_SupuestosModelo.md       # Model assumptions & constraints (English)
+├── Pipeline_Diagrama.png           # Visual diagram of the pipeline stages
+├── requirements.txt                # Python dependency manifest
+├── notebooks/                      # Google Colab source notebooks
+│   └── *.ipynb
+├── data/                           # Generated datasets (auto-created at runtime)
+│   ├── dataset_contrataciones.csv  # Synthetic hiring/attrition dataset
+│   ├── forecast_rrhh.csv           # Model forecast output
+│   └── presupuesto_rrhh.xlsx       # Budget projection report (Excel)
+├── models/                         # Serialized trained ANN models (.keras / .h5)
+├── scalers/                        # Persisted feature scalers (joblib)
+└── encoders/                       # Persisted label encoders (joblib)
+```
+
+> **Google Colab note**: The `data/`, `models/`, `scalers/`, and `encoders/` directories are created automatically at pipeline runtime. No manual directory setup is required.
+
+---
+
+## ⚡ Quick Start
+
+1. Open the main notebook in Google Colab.
+2. Execute pipeline stages sequentially from **Stage 1** through **Stage 7**.
+3. Review the metrics and visualizations rendered inline.
+4. Download or inspect the generated output files (`.csv` / `.xlsx`).
+
+---
+
+## 📈 Evaluation Metrics
+
+| Metric | Description |
+|---|---|
+| **MAE** (Mean Absolute Error) | Average absolute deviation in headcount predictions |
+| **RMSE** (Root Mean Squared Error) | Error metric that penalizes large deviations more heavily |
+| **R²** (Coefficient of Determination) | Proportion of target variance explained by the model |
+
+---
+
+## 🛠️ Local Development Setup
+
+> **Compatibility note**: TensorFlow requires Python **3.9–3.12**. If running Python 3.13+, use Google Colab for model execution or create a compatible virtual environment.
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Merlin2098/Predictive_People_Analythics_with_RNA.git
+cd Predictive_People_Analythics_with_RNA
+
+# 2. Create and activate a virtual environment (Python 3.10 recommended)
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # macOS/Linux
+
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Launch the notebook
+jupyter notebook notebooks/
+```
+
+---
+
+**Project Version**: 1.0
+**Last Updated**: September 2025
+**Status**: Demonstrative / Academic
+**Domain**: People Analytics · Workforce Forecasting · HR Data Engineering

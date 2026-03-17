@@ -14,3 +14,34 @@ forecast.csv
 
 # Archivos temporales o de sistema
 .DS_Store
+
+# Tinker v2 framework (portable - not part of host project)
+agents2/engine/
+agents2/runtime/
+agents2/knowledge/
+agents2/tools/
+agents2/hooks/
+agents2/instructions/
+.githooks/
+.gitattributes
+agent_framework_config.yaml
+AGENTS.md
+agent.md
+agents2/rules.md
+# Tinker v2 generated runtime state
+.tinker/active_kernels.yaml
+.tinker/architecture_metrics.yaml
+.tinker/capability_map.yaml
+.tinker/context_bundle.yaml
+.tinker/context_graph.json
+.tinker/dependencies_graph.json
+.tinker/dependencies_report.md
+.tinker/project_metadata.meta.json
+.tinker/project_metadata.yaml
+.tinker/skills_registry.json
+.tinker/treemap.md
+.tinker/generated_skill_wrappers/
+
+#host project
+.venv/
+.pre-commit-config.yaml
